@@ -1,0 +1,239 @@
+/*
+COLORS:
+(There is no way to set variable, just search and replace the RGB value if need to change color
+#5bb705; /* company green */ /*used in banner bkg
+#006EA4; /* med blue */ /* for button normal
+#0086B9; /* med blue lighter*/ /* for focus
+#005386; /* med blue darker*/ /* for hover
+#0000A0; /* Blue: hyperlink text color
+#555555; /* grey : main font color
+#AAA; /* grey : background & borders color 
+#6ACAD7; /* highlight blue */ /*hyperlinks
+#ffe699; /* tan */ /* popup background
+#CCCCCC; /* grey, popup border 
+*/
+* {
+	font-family: Verdana, Arial,Helvetica,sans-serif;
+	font-size: 10pt;
+	color:#555555; /* grey : main font color */
+/*	float : left; */
+}
+body {
+	margin-left:20px;
+}
+
+/* 
+** Basic elements & controls 
+*/
+ul {
+  margin: 0px;
+  padding:0px;
+  list-style-type: none;
+}
+
+a {
+	text-decoration: none;
+	color : #0000A0; /* Blue: hyperlink text color */
+}
+a:hover
+{
+	background-color : #6ACAD7; /* highlight blue */
+	cursor:pointer;
+}
+
+
+
+/* 
+** Main container: first div after body tag 
+*/
+.main-container {
+	overflow:hidden; /*crop, instead of resize, if browser width is narrow */
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:1;
+	width:100%;
+}
+
+/* Banner */
+.divBanner, .page_title {	 
+	background-color:#5bb705; /* company green */;
+	text-align:center;
+}
+.divBanner .title {
+	color : white;
+	padding:15px;
+	font-size:2em;
+}
+.page_title {
+	color : white;
+	padding:5px 10px 10px 10px;
+	font-size:1.5em;
+}
+.page_contents {
+	padding:0px 20px 20px 20px;
+}
+.section {
+	width:400px;
+	min-height:400px;
+	margin:0 auto;
+	-webkit-border-radius:10px;
+	border-radius:10px; 
+	border: solid 1px #AAA; /* grey : background & borders color*/
+	padding:10px;
+
+}
+.login_container, .signup_container {
+
+}
+.form_element{
+	margin-top:10px;
+	width:100%;
+}
+
+.footer_divider {
+	height:5px;
+	background-color:#5bb705; /* company green */;
+	width:100%
+	
+}
+.footer_contents {
+	padding:5px 5px 5px 20px;
+}
+
+.user_info {
+	width:300px;
+	color: #5bb705; /* company green */;
+	font-size:1.1em;
+	padding-top:10px;
+	padding-bottom:10px;
+	font-weight:bold;
+}
+.note_list_container table {
+	border-collapse: collapse;
+	border:1ox solid #AAA; /* grey : background & borders color*/
+	min-width:300px;
+}
+.tr_title td {
+	border-top:1px solid #AAA; /* grey : background & borders color*/
+	padding:5px;
+}
+.tbl_note_list tr:hover {
+	background-color:  #cafd9b; /* light company green */;
+}
+.note_list_item_controls {
+	text-align:right;
+}
+.note_list_item_title {
+	text-align:left;
+	font-weight:bold;
+}
+.note_list_item_type {
+	width:10px;
+}
+
+.hidden {
+ 	display:none;
+ }
+
+.nowrap {
+	white-space: nowrap;
+}
+.txt_number { width:70px; }
+
+input, textarea, .div_multi {
+    padding:5px; 
+    border:2px solid #AAA; /* grey : background & borders color*/ 
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+textarea, .form_element input {
+	width:95%;
+}
+.note_container input[type=submit] {
+	width:40%;
+}
+
+input:focus, textarea:focus {
+    border:2px solid #006EA4; /* med blue */
+}
+/* hide spinners*/
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+ }
+
+ input[type=number] {
+      -moz-appearance:textfield;
+ }
+textarea {
+	/*width: 50em; /* #cols */
+    height: 16em; /* #rows */
+}
+
+input[type=submit] {
+    cursor:pointer;
+    background-color: #006EA4; /* med blue */
+    border: none;
+    height:30px;
+    color:white;
+}
+input[type=submit].focus,input[type=submit]:active {
+	background-color: #0086B9; /* med blue lighter*/
+} 
+input[type=submit]:hover {
+   background-color: #005386; /* med blue darker*/
+}
+input[type=submit]:disabled {
+  background-color: #AAA; /* grey : background & borders color */
+}
+select {
+	padding:5px; 
+    border:2px solid #AAA; /* grey : background & borders color*/
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+
+.err_msg {
+	color: red;
+}
+
+/* for image/icons used as buttons: */
+.icon_button {
+	/* parent container for images (icons) that are used as buttons */
+	position:relative; /* req for tooltip*/
+}
+.icon_button img {
+	vertical-align:bottom;
+	height:20px;
+}
+.icon_button .tooltiptext {
+	white-space: nowrap;
+	min-width:120px;
+	padding: 5px;
+    visibility: hidden;
+    opacity: 0;
+    color: #000;
+    background-color: #ffe699; /* tan, popup background */;
+    text-align: center;
+    border:1px solid #333; /* dark grey, popup border */
+    border-radius: 6px;
+     -webkit-border-radius: 6px;
+
+    /* Position the tooltip */
+	bottom: 150%;
+    left: 0%;
+    position: absolute;
+    z-index: 1;
+}
+
+.icon_button:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s, opacity 0.5s linear;
+  	-webkit-transition-delay: 1s; /* Safari */
+    transition-delay: 1s;
+}
