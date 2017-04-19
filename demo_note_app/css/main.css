@@ -237,3 +237,7 @@ select {
   	-webkit-transition-delay: 1s; /* Safari */
     transition-delay: 1s;
 }
+
+.loading img {
+	height:20px;
+}
