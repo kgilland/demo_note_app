@@ -11,6 +11,7 @@ require_once('sub/head.php'); //page header
 ?>
 <div class='page_title'>Note List</div>
 <div class='page_contents'>
+	<div class='loading hidden'><img src='img/ajax-loader.gif'> Loading ...</div>
 	<div class='note_list_container section'>
 		<table class='tbl_note_list_heading' style='width:100%'>
 			<tr>
