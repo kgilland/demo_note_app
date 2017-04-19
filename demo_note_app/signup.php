@@ -12,6 +12,7 @@ require_once('sub/head.php'); //page header
 <div class='page_title'>Sign Up</div>
 <div class='page_contents'>
 	<div class='signup_container section'>
+		<div class='loading hidden'><img src='img/ajax-loader.gif'> Loading ...</div>
 		<div class='form_element user_name'>
 			<span class='login_label'>Name:</span><br>
 			<input class='login_text' type='text' placeholder='' >
